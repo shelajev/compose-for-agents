@@ -7,11 +7,6 @@ on:
       - agno/**
     branches:
       - main
-  pull_request:
-    paths:
-      - .github/workflows/agno.yaml
-      - agno/**
-
 permissions:
   contents: read
 
@@ -26,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Install uv
         run: |
@@ -51,7 +46,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Docker Compose
         uses: ./.github/actions/setup-compose
